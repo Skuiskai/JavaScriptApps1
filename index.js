@@ -1,6 +1,7 @@
 //what number would you like to count to?
 //By what number would you like to count?
 //Count By X App
+//comments
 function countTo () {
 	//first get a max number from the user
 	let countMax = Number(prompt("What number would you like to count to?"));
