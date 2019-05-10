@@ -8,10 +8,10 @@ function countTo () {
 	//beginning of control flow to make sure if countMax is a number and isn't 0
 	if (typeof(countMax) === "number" && isNaN(countMax) === false && countMax !== 0) {
 		console.log(typeof(countMax));
-	//if all went well then you will choose a number to count by up to the next max number that was chosen.
+	    //if all went well then you will choose a number to count by up to the next max number that was chosen.
 		console.log("Ok good, you chose " + countMax + ". Next choose a number to count by")
 		let countByUser = Number(prompt("How many numbers do you want to count by? Cannont exceed the mad number."));
-	//Beginning of control flow for the number to be counted by to make sure it doesn't exceed the max or be 0 or be NaN
+	    //Beginning of control flow for the number to be counted by to make sure it doesn't exceed the max or be 0 or be NaN
 		while(countByUser > countMax || countByUser === 0 || isNaN(countByUser) === true) {
 			if (countByUser > countMax || countByUser === 0 || isNaN(countByUser) === true) {
 				if (countByUser === 0) {
@@ -24,18 +24,18 @@ function countTo () {
 					console.log("You can't choose more than your max count of: " + "(" + countMax + ")" + ". Try again...");
 					countByUser = Number(prompt("You can't choose more than your max count of: " + "(" + countMax + ")" + ". Try again..."));
 				}
-			}
-		}
+			};
+		};
 	//End control flow check on on the number chosen to count by up to the max
     
-    //Logic for counting up to max number by users chosen number
+        //Logic for counting up to max number by users chosen number
 		let countByUserStore = countByUser;		
 		if (typeof(countByUser) === "number" && isNaN(countByUser) === false) {
 				while(countByUser <= countMax) {
 					console.log(countByUser);
 					countByUser = countByUserStore + countByUser;
 				}
-	//End of logic
+	    //End of logic
 
 		} else {
 				console.log("Something went wrong!");
@@ -44,7 +44,7 @@ function countTo () {
 				console.log("remainder of " + countByUser % countMax);
 	}
 
-	} else if (countMax === 0){
+	} else if (countMax === 0) {
 		console.log("You can not multiply to 0");
 	} else {
 		console.log("That was not a number!");
@@ -76,11 +76,11 @@ function fizzBuzz () {
 	let counter = 1;
 	while (counter <= 100) {
 		if (counter % 3 === 0 && counter % 5 === 0) {
-			console.log(counter + " FizzBuzz");
+			console.log(counter + " GreenBlue");
 		} else if (counter % 5 === 0) {
-			console.log(counter + " Buzz");
+			console.log(counter + " Blue");
 		} else if (counter % 3 === 0) {
-			console.log(counter + " Fizz");
+			console.log(counter + " Green");
 		}
 		counter++; 
 	}
@@ -143,5 +143,10 @@ const powerWha = function () {
 	}
 	console.log(power(x, y));
 };
+
+function square () {
+	let x = prompt("Choose a number. ");
+	console.log(x * x);
+}
 
  
