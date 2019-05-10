@@ -104,10 +104,44 @@ function chessBoard () {
 			} else {
 				board += " ";
 			}
-		}
+		};
 		board += "\n"
-	}
+	};
 	console.log(board);
-}
+};
+
+//chapter 3 notes
+
+const power = function(base, exponent) {
+	let result = 1;
+	for (let count = 0; count < exponent; count++) {
+		result *= base;
+	}
+	return result;
+};
+
+//power apps
+const powerWha = function () {
+	let x = Number(prompt("power: "));
+	while (typeof(x) !== "number" || isNaN(x) === true) {
+		if (typeof(x) !== "number" || isNaN(x) === true) {
+			console.log("That was not a number...");
+		}
+
+		console.log("please choose a number...");
+		x = Number(prompt("power: "));
+	}
+
+	let y = Number(prompt("by: "));
+	while (typeof(y) !== "number" || isNaN(y) === true) {
+		if (typeof(y) !== "number" || isNaN(y) === true) {
+			console.log("That was not a number...");
+		}
+
+		console.log("Please choose a number...");
+		y = Number(prompt("by: "));
+	}
+	console.log(power(x, y));
+};
 
  
